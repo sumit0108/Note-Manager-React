@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import s from "./style.module.css";
-import { PenFill, TrashFill } from "react-bootstrap-icons";
+import { PencilFill, TrashFill } from "react-bootstrap-icons";
 import { ButtonPrimary } from "components/ButtonPrimary/ButtonPrimary";
 import { validatorService } from "utils/validator";
 import { FieldError } from "components/FieldError/FieldError";
@@ -14,14 +14,14 @@ const VALIDATOR = {
     return validatorService.min(value, 3);
   },
 };
-export const NoteForm = ({
+export function NoteForm({
   isEditable = true,
   note,
   title,
   onClickEdit,
   onClickDelete,
   onSubmit,
-}) => {
+}) {
   const [formValues, setFormValues] = useState({
     title: note?.title || "",
     content: note?.content || "",
@@ -56,7 +56,7 @@ export const NoteForm = ({
   const actionIcons = (
     <>
       <div className="col-1">
-        {onClickEdit && <PenFill onClick={onClickEdit} className={s.icon} />}
+        {onClickEdit && <PencilFill onClick={onClickEdit} className={s.icon} />}
       </div>
       <div className="col-1">
         {onClickDelete && (
@@ -119,4 +119,4 @@ export const NoteForm = ({
       {onSubmit && submitBtn}
     </div>
   );
-};
+}

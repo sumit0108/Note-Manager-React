@@ -18,23 +18,34 @@ export function App() {
   }
 
   useEffect(() => {
-    const unsub = NoteApi.onShouldSyncNotes(fetchAllNoted);
-    return () => {
-      unsub();
-    };
+    fetchAllNoted();
   }, []);
 
   return (
     <div>
       <Header />
-      <ButtonPrimary
-        className={s.buttonAdd}
-        onClick={() => navigate("/note/new")}
-      >
-        +
-      </ButtonPrimary>
+
+      <div>
+        <button
+          type="button"
+          className="btn btn-primary"
+          onClick={() => navigate("/")}
+          style={{ marginTop: 5, marginLeft: 5, position: "absolute" }}
+        >
+          Home
+        </button>
+      </div>
+
       <div className={s.workspace}>
         <Outlet />
+        <div className="col-xs-12 col-sm-8 text-end">
+          <ButtonPrimary
+            onClick={() => navigate("/note/new")}
+            className={s.buttonAdd}
+          >
+            +
+          </ButtonPrimary>
+        </div>
       </div>
     </div>
   );

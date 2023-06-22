@@ -47,7 +47,7 @@ export const SignIn = () => {
           Sign in !{" "}
         </ButtonPrimary>
         <span>
-          Don't have an account yet ? <Link to={"/signup"}>sign in</Link>
+          Don't have an account yet ? <Link to={"/signup"}>sign up</Link>
         </span>
       </form>
     </div>

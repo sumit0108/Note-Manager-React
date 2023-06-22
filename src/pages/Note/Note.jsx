@@ -19,7 +19,6 @@ export const Note = (props) => {
     const updatedNote = await NoteApi.updateById(note.id, formValues);
     dispatch(updateNote(updatedNote));
     setIsEditable(false);
-    console.log(updatedNote);
   };
 
   async function deleteNote_() {

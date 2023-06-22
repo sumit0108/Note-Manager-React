@@ -20,6 +20,7 @@ export const Header = () => {
     return (
       <div>
         <img
+          alt="logo"
           src={`https://api.dicebear.com/5.x/bottts/svg?seed=${user.email}`}
           style={{ width: 40 }}
           className="rounded-circle"

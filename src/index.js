@@ -27,7 +27,8 @@ root.render(
             <Route path="/signup" element={<Signup />} />
             <Route path="/" element={<ProtectedApp />}>
               <Route path="/" element={<NoteBrowser />} />
-              {/* <Route path="/" element={<ProtectedNoteBrowse />} /> Now you don't have to protect every component just protect App component */}
+              {/* <Route path="/" element={<ProtectedNoteBrowse />} />  Now you don't
+              have to protect every component just protect App component */}
               <Route path="/note/:noteId" element={<Note />} />
               <Route path="/note/new" element={<NoteCreate />} />
               <Route path="*" element={<PageNoteFound />} />

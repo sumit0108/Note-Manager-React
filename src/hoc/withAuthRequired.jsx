@@ -10,7 +10,7 @@ export const withAuthRequired = (Component) => {
       if (!user) {
         navigate("/signin");
       }
-    }, [user]);
+    }, [navigate, user]);
     return user && <Component />;
   };
 };

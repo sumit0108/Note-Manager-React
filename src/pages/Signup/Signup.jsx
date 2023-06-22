@@ -54,10 +54,10 @@ export const Signup = () => {
         />
 
         <ButtonPrimary type={"submit"} className={s.button}>
-          Signup !
+          Sign up !
         </ButtonPrimary>
         <span>
-          Already have an account ? <Link to={"/signin"}>Signin</Link>
+          Already have an account ? <Link to={"/signin"}>Sign in</Link>
         </span>
       </form>
     </div>

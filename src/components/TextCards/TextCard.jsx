@@ -25,7 +25,7 @@ export const TextCard = ({
       onMouseLeave={() => setIsCardHovered(false)} // when mouse leave border become normal
     >
       <div className="card-body">
-        <div className={`${s.title_row}`}>
+        <div className={s.title_row}>
           <h5 className="card-title">{title}</h5>
           <Trash
             size={20}
